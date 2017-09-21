@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelizeConnection = require('../db');
 
-//create person model,  'case' => name of table = cases
+//create case model,  'case' => name of table = cases
 var Case = sequelizeConnection.define('case', {
   tipoCaso: {
     type: Sequelize.STRING,

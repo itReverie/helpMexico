@@ -8,14 +8,15 @@ const Sequelize = require('sequelize');
 const sequelizeConnection = require('./db');
 
 //servers static files
-app.use(express.static(path.join(__dirname, '/front/bundle')));
+//heroku complains
+// app.use(express.static(path.join(__dirname, '/front/bundle')));
 
 //ROUTES//
 const router = require('./routes');
 const caseRoute = router.caseRoute;
 
 //CALL FILE, CREATE DB
-require('./seeds/case-seed.js')
+require('./seeds/case-seed.js');
 
 //arses the text as URL encoded data 
 app.use(bodyParser.urlencoded({ extended: true }));
