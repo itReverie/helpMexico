@@ -35,5 +35,8 @@
   "engines": {
     "node": "8.4.0"
   },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  },
   "main": "db.js"
 }
