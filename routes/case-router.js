@@ -3,13 +3,13 @@ const Case = require('../models/case-model');
 const express = require('express');
 const router = express.Router();
 
-//GET ALL PEOPLE PATH: /api/people
-// const getAllPeople = (req,res)=>(
-//   Person.findAll()
-//   .then((data)=>
-//    	res.send(data)
-//    	)
-//   )
+//GET ALL CAES PATH: /api/cases
+const getAllCase = (req,res)=>(
+  Case.findAll()
+  .then((data)=>
+   	res.send(data)
+   	)
+  )
 
 
 // //GET ONE PERSON
@@ -63,7 +63,7 @@ const createOneCase = (req,res)=>{
 
 //ROUTES//
 router.route('/')
- // .get(getAllPeople)
+ .get(getAllCase)
  .post(createOneCase)
 
 
